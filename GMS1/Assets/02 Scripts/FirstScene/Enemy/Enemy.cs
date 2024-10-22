@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : HitObject
 {
-    // Start is called before the first frame update
-    void Start()
+    private EnemyMovement _enemyMovement;
+
+    private void Awake()
+    {
+        _enemyMovement = GetComponent<EnemyMovement>();
+    }
+
+    private void Update()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Hit()
     {
-        
+        Debug.Log("Enemy Hit");
     }
 }
