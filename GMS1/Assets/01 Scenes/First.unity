@@ -426,6 +426,8 @@ GameObject:
   - component: {fileID: 1518677234}
   - component: {fileID: 1518677233}
   - component: {fileID: 1518677232}
+  - component: {fileID: 1518677237}
+  - component: {fileID: 1518677236}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -522,6 +524,30 @@ Transform:
   - {fileID: 1804621846}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1518677236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518677231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 632e3bcdb4d4a1049b30b3d7043359b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1518677237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518677231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 471cdce3d0e414f44b7dad576248ae10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1522928639
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,6 +560,8 @@ GameObject:
   - component: {fileID: 1522928642}
   - component: {fileID: 1522928641}
   - component: {fileID: 1522928640}
+  - component: {fileID: 1522928645}
+  - component: {fileID: 1522928644}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -629,6 +657,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1522928644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522928639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a5daf57f921a3941b19f8a4a5994c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1522928645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522928639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 136989a4f4bf4b14d999fe4496478cf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1804621845
 GameObject:
   m_ObjectHideFlags: 0
