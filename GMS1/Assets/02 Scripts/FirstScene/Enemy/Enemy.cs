@@ -13,11 +13,12 @@ public class Enemy : HitObject
 
     private void Update()
     {
-        
+        _enemyMovement.Move();
     }
 
     public override void Hit()
     {
         Debug.Log("Enemy Hit");
+        _enemyMovement.StopImmediately();
     }
 }

@@ -13,11 +13,12 @@ public class Player : HitObject
 
     private void Update()
     {
-        
+        _playerMovement.Move();
     }
 
     public override void Hit()
     {
         Debug.Log("Player Hit");
+        _playerMovement.StopImmediately();
     }
 }
