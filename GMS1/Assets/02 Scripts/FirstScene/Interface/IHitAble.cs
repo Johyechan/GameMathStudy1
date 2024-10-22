@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IHitCheck
+public interface IHitAble
 {
     public void Hit();
 }

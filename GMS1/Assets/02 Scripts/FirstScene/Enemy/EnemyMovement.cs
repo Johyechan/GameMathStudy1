@@ -2,17 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class EnemyMovement : Movement
 {
-    // Start is called before the first frame update
-    void Start()
+    private GameObject _gameObj;
+
+    private void Start()
     {
-        
+        _gameObj = GameObject.Find("Player");
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Move()
     {
-        
+        if (_isStop)
+            return;
+
+        Vector3 playerPos = _gameObj.transform.position;
+        Vector3 enemyPos = transform.position;
+
+        Vector3 dir = playerPos - enemyPos;
+
+        _rigidbody.velocity = dir.normalized * _Speed;
     }
 }

@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : Movement
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Move()
     {
-        
-    }
+        if (_isStop)
+            return;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        float moveHorizontal = Input.GetAxisRaw("Horizontal");
+        float moveVertical = Input.GetAxisRaw("Vertical");
+
+        Vector3 moveVec = new Vector3(moveHorizontal, 0, moveVertical).normalized;
+
+        _rigidbody.velocity = moveVec * _Speed;
     }
 }
