@@ -8,3 +8,7 @@ This project is learning how to use vectors in games.
  - First 씬은 벡터의 뺄셈과 덧셈을 어떻게 활용하는지를 공부하기 위해 제작한 씬이다.
  - 밑 사이트들은 벡터의 덧셈과 뺄셈을 이해하기 위해 참고한 사이트이다.
  - [https://blog.naver.com/gt7461/110155926081](https://waraccc.tistory.com/11)
+
+# 왜 벡터의 덧셈과 뺄셈을 공부하였는가?
+ - 벡터의 덧셈과 뺄셈을 활용하여 내가 원하는 방향을 보게 할 수 있다
+ - 예시) 적이 플레이어 방향을 바라본다, 내가 적의 방향을 바라본다
