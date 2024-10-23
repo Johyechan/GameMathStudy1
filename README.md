@@ -6,7 +6,7 @@ This project is learning how to use vectors in games.
 
 # First 씬(벡터의 덧셈과 뺄셈)
  - First 씬은 벡터의 뺄셈과 덧셈을 어떻게 활용하는지를 공부하기 위해 제작한 씬이다.
- - 밑 사이트들은 벡터의 덧셈과 뺄셈을 이해하기 위해 참고한 사이트이다.
+ - 밑 사이트는 벡터의 덧셈과 뺄셈을 이해하기 위해 참고한 사이트이다.
  - [https://blog.naver.com/gt7461/110155926081](https://waraccc.tistory.com/11)
 
 # 왜 벡터의 덧셈과 뺄셈을 공부하였는가?
@@ -19,4 +19,8 @@ This project is learning how to use vectors in games.
  - 적이 플레이어를 따라다니기 위해서 계속해서 플레이어의 위치에서 자기 자신의 위치를 뺀 값을 구하며 플레이어를 정상적으로 따라가게 된다 + 정규화하여 속도가 아닌 방향만 구하도록 하였다 (벡터의 뺄셈)
  - 카메라가 플레이어의 위치 + 자신이 정한 특정 벡터를 따라다니도록 했다.(벡터의 덧셈)
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Second 씬()
+# Second 씬(Quaternion & Euler Angle)
+ - Second 씬은 Quaternion과 Euler Angle을 공부하여 회전에 적용시키기 위해 제작한 씬이다.
+ - 밑 사이트들은 Quaternion과 Euler Angle을 공부하기 위해 참고한 사이트이다.
+ - https://ko.wikipedia.org/wiki/%EC%98%A4%EC%9D%BC%EB%9F%AC_%EA%B0%81(Euler Angle)
+ - https://taeyoung96.github.io/mathematics/Euler/(Euler Angle)
