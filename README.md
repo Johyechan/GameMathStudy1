@@ -22,5 +22,5 @@ This project is learning how to use vectors in games.
 # Second 씬(Quaternion & Euler Angle)
  - Second 씬은 Quaternion과 Euler Angle을 공부하여 회전에 적용시키기 위해 제작한 씬이다.
  - 밑 사이트들은 Quaternion과 Euler Angle을 공부하기 위해 참고한 사이트이다.
- - https://ko.wikipedia.org/wiki/%EC%98%A4%EC%9D%BC%EB%9F%AC_%EA%B0%81(Euler Angle)
- - https://taeyoung96.github.io/mathematics/Euler/(Euler Angle)
+ - https://ko.wikipedia.org/wiki/%EC%98%A4%EC%9D%BC%EB%9F%AC_%EA%B0%81 (Euler Angle)
+ - https://taeyoung96.github.io/mathematics/Euler/ (Euler Angle)
