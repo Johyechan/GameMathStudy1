@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : Movement
+public class EnemyMovement : PhysicsMovement
 {
-    private GameObject _gameObj;
+    private GameObject _playerObject;
 
     private void Start()
     {
-        _gameObj = GameObject.Find("Player");
+        _playerObject = GameObject.Find("Player");
     }
 
     public override void Move()
@@ -16,7 +16,7 @@ public class EnemyMovement : Movement
         if (_isStop)
             return;
 
-        Vector3 playerPos = _gameObj.transform.position;
+        Vector3 playerPos = _playerObject.transform.position;
         Vector3 enemyPos = transform.position;
 
         Vector3 dir = playerPos - enemyPos;

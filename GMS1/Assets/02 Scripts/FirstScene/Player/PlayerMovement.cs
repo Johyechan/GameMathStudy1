@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : Movement
+public class PlayerMovement : PhysicsMovement
 {
     public override void Move()
     {
