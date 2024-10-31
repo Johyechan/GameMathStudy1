@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraManager : MonoBehaviour
+namespace FirstScene
 {
-    private CameraMovement _cameraMovement;
-
-    private void Awake()
+    public class CameraManager : MonoBehaviour
     {
-        _cameraMovement = GetComponent<CameraMovement>();
-    }
+        private CameraMovement _cameraMovement;
 
-    void Update()
-    {
-        _cameraMovement.Move();
+        private void Awake()
+        {
+            _cameraMovement = GetComponent<CameraMovement>();
+        }
+
+        void Update()
+        {
+            _cameraMovement.Move();
+        }
     }
 }
+

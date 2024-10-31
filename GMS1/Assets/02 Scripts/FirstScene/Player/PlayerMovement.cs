@@ -2,18 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : PhysicsMovement
+namespace FirstScene
 {
-    public override void Move()
+    public class PlayerMovement : PhysicsMovement
     {
-        if (_isStop)
-            return;
+        public override void Move()
+        {
+            if (_isStop)
+                return;
 
-        float moveHorizontal = Input.GetAxisRaw("Horizontal");
-        float moveVertical = Input.GetAxisRaw("Vertical");
+            float moveHorizontal = Input.GetAxisRaw("Horizontal");
+            float moveVertical = Input.GetAxisRaw("Vertical");
 
-        Vector3 moveVec = new Vector3(moveHorizontal, 0, moveVertical).normalized;
+            Vector3 moveVec = new Vector3(moveHorizontal, 0, moveVertical).normalized;
 
-        _rigidbody.velocity = moveVec * _Speed;
+            _rigidbody.velocity = moveVec * _Speed;
+        }
     }
 }
+

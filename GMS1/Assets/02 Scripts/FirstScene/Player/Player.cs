@@ -2,23 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : HitObject
+namespace FirstScene
 {
-    private PlayerMovement _playerMovement;
-
-    private void Awake()
+    public class Player : HitObject
     {
-        _playerMovement = GetComponent<PlayerMovement>();
-    }
+        private PlayerMovement _playerMovement;
 
-    private void Update()
-    {
-        _playerMovement.Move();
-    }
+        private void Awake()
+        {
+            _playerMovement = GetComponent<PlayerMovement>();
+        }
 
-    public override void Hit()
-    {
-        Debug.Log("Player Hit");
-        _playerMovement.StopImmediately();
+        private void Update()
+        {
+            _playerMovement.Move();
+        }
+
+        public override void Hit()
+        {
+            Debug.Log("Player Hit");
+            _playerMovement.StopImmediately();
+        }
     }
 }
+

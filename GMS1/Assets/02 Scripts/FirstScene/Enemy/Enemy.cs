@@ -2,23 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : HitObject
+namespace FirstScene
 {
-    private EnemyMovement _enemyMovement;
-
-    private void Awake()
+    public class Enemy : HitObject
     {
-        _enemyMovement = GetComponent<EnemyMovement>();
-    }
+        private EnemyMovement _enemyMovement;
 
-    private void Update()
-    {
-        _enemyMovement.Move();
-    }
+        private void Awake()
+        {
+            _enemyMovement = GetComponent<EnemyMovement>();
+        }
 
-    public override void Hit()
-    {
-        Debug.Log("Enemy Hit");
-        _enemyMovement.StopImmediately();
+        private void Update()
+        {
+            _enemyMovement.Move();
+        }
+
+        public override void Hit()
+        {
+            Debug.Log("Enemy Hit");
+            _enemyMovement.StopImmediately();
+        }
     }
 }
+
