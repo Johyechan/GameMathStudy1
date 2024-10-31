@@ -2,25 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : PhysicsMovement
+namespace FirstScene
 {
-    private GameObject _playerObject;
-
-    private void Start()
+    public class EnemyMovement : PhysicsMovement
     {
-        _playerObject = GameObject.Find("Player");
-    }
+        private GameObject _playerObject;
 
-    public override void Move()
-    {
-        if (_isStop)
-            return;
+        private void Start()
+        {
+            _playerObject = GameObject.Find("Player");
+        }
 
-        Vector3 playerPos = _playerObject.transform.position;
-        Vector3 enemyPos = transform.position;
+        public override void Move()
+        {
+            if (_isStop)
+                return;
 
-        Vector3 dir = playerPos - enemyPos;
+            Vector3 playerPos = _playerObject.transform.position;
+            Vector3 enemyPos = transform.position;
 
-        _rigidbody.velocity = dir.normalized * _Speed;
+            Vector3 dir = playerPos - enemyPos;
+
+            _rigidbody.velocity = dir.normalized * _Speed;
+        }
     }
 }
+

@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class HitObject : MonoBehaviour, IHitAble
+namespace FirstScene
 {
-    public abstract void Hit();
-
-    private void OnCollisionEnter(Collision collision)
+    public abstract class HitObject : MonoBehaviour, IHitAble
     {
-        IHitAble hitCheck = collision.gameObject.GetComponent<IHitAble>();
+        public abstract void Hit();
 
-        if (hitCheck != null)
+        private void OnCollisionEnter(Collision collision)
         {
-            hitCheck.Hit();
+            IHitAble hitCheck = collision.gameObject.GetComponent<IHitAble>();
+
+            if (hitCheck != null)
+            {
+                hitCheck.Hit();
+            }
         }
     }
 }
+

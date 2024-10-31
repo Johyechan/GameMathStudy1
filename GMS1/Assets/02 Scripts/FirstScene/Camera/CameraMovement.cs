@@ -2,27 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraMovement : Movement
+namespace FirstScene
 {
-    [SerializeField] private Vector3 _DistanceVector;
-
-    private GameObject _playerObject;
-    private GameObject _camera;
-
-    private void Start()
+    public class CameraMovement : Movement
     {
-        _playerObject = GameObject.Find("Player");
-        _camera = Camera.main.gameObject;
-    }
+        [SerializeField] private Vector3 _DistanceVector;
 
-    public override void Move()
-    {
-        Vector3 playerPos = _playerObject.transform.position;
+        private GameObject _playerObject;
+        private GameObject _camera;
 
-        Vector3 sumVector = playerPos + _DistanceVector;
+        private void Start()
+        {
+            _playerObject = GameObject.Find("Player");
+            _camera = Camera.main.gameObject;
+        }
 
-        Vector3 cameraPos = new Vector3(sumVector.x, _camera.transform.position.y, sumVector.z);
+        public override void Move()
+        {
+            Vector3 playerPos = _playerObject.transform.position;
 
-        _camera.transform.position = Vector3.Lerp(_camera.transform.position, cameraPos, _Speed * Time.deltaTime);
+            Vector3 sumVector = playerPos + _DistanceVector;
+
+            Vector3 cameraPos = new Vector3(sumVector.x, _camera.transform.position.y, sumVector.z);
+
+            _camera.transform.position = Vector3.Lerp(_camera.transform.position, cameraPos, _Speed * Time.deltaTime);
+        }
     }
 }
+

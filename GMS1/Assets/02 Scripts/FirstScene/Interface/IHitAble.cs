@@ -2,7 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IHitAble
+namespace FirstScene
 {
-    public void Hit();
+    public interface IHitAble
+    {
+        public void Hit();
+    }
 }
+
