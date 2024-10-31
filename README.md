@@ -42,7 +42,6 @@ This project is learning how to use vectors in games.
  - Euler Angle은 Vector3로 편하게 각도를 정할 수 있다.
  - 내적을 활용하여 시야각 안에 대상이 들어왔는지 판단할 수 있다
 
-# 결과
+# 예상 결과
  - 적이 시야각 안에 들어온 플레이어를 바라본다 (삼각함수와 내적을 활용한 구현)
- - 위 구현은 Quaternion과 Euler Angle을 둘 다 활용해서 구현해봤다.(Quaternion & Euler Angle)
- - 아쉽게도 Quaternion과 Euler Angle을 제대로 이해한 건지는 잘 모르겠다.
+ - 위 구현은 Quaternion과 Euler Angle을 둘 다 활용해서 구현한다.(Quaternion & Euler Angle)
