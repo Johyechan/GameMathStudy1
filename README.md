@@ -26,6 +26,7 @@ This project is learning how to use vectors in games.
  - https://m.blog.naver.com/saomath/221979375013 (호도법)
  - https://sinsa0918.tistory.com/2 (유니티 삼각함수)
  - https://backback.tistory.com/435 (삼각함수를 활용한 시야각 코드 및 설명)
+ - 챗gpt
 
 # 왜 삼각함수와 내적을 공부하는가?
  - 삼각함수를 활용하여 시야각을 구현 가능하다
