@@ -24,6 +24,14 @@ namespace SecondScene
             _isStart = true;
         }
 
+        private void Update()
+        {
+            if(_fov.CheckIsPlayerInFOV(_Degree))
+            {
+                Debug.Log("시야각 안에 들어옴");
+            }
+        }
+
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.white;
