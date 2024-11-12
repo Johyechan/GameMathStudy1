@@ -22,6 +22,7 @@ namespace SecondScene
             // 유니티의 좌표계에서 forward 방향이 z축으로 정의가 된다.
             // y축의 각도를 반영하기 위해서는 90을 빼줘야 한다.
             // 왜 90을 빼주는가 
+            // 
             float theta = 90 - angle - transform.eulerAngles.y;
             float x = Mathf.Cos(theta * Mathf.Deg2Rad) * radius;
             float y = transform.position.y;
@@ -37,7 +38,7 @@ namespace SecondScene
             return results;
         }
 
-        public bool CheckIsPlayerInFOV(float angle)
+        public bool CheckIsPlayerInFOV(float distance, float angle)
         {
             // 각도만 필요한 경우
             // 벡터의 뺄셈을 활용하여 플레이어위치까지의 벡터를 구한 후 정규화한다.
@@ -46,14 +47,16 @@ namespace SecondScene
             // 그렇다면 내적을 하는 이유는 무엇인가
             // 1. 내적을 하는 이유는 두 벡터간의 각도를 코사인 값으로 표현할 수 있기 때문이다.
             // 2. 또한 정규화를 한 경우 내적한 값이 a각도의 코사인 값과 같아지므로 각도를 쉽게 판단 가능하다.
-
-            // 하지만 여기서 나는 길이를 생각해야하기 때문에 정규화한 값의 결과와는 달라진다.
             float dotResult = Vector3.Dot(transform.forward.normalized, playerVec);
             
             // 코사인을 사용하여 구하는 이유는 코사인은 내적을 하는 이유의 2번과 관련이 있다.
             // 결국 내적도 정규화를 해서 내적할 경우 a각도의 코사인 값이 나오게 된다.
             // 그렇기에 코사인으로 비교하는 것이다.
             float threshold = Mathf.Cos(angle * Mathf.Deg2Rad);
+
+            // 두점 사이의 거리를 구하는 공식을 활용하는 Vector3.Distance를 사용하여 두 점사이의 거리를 구한다.
+            // 이는 특정 거리 안에 있는지 까지 판단하기 위한 것이다.
+            float distanceFromTarget = Vector3.Distance(transform.position, _player.transform.position);
 
             // 왜 내적한 값이 더 커야하는가?
             // 예시로 우리가 왼쪽, 오른쪽으로 각각 45도 씩 벌어진 총 90각도의 시야각을 가진다고 생각해보자
@@ -68,8 +71,7 @@ namespace SecondScene
             // 예시를 들어서 우리가 막대가 있다.
             // 그 막대를 기준으로 오른쪽으로 45도 기울어진 각도와 왼쪽으로 45도 기울어진 각도는 둘이 똑같이 45도이다.
             // 그렇기에 시야각을 판별할 때 코사인 45도보다 큰지만 확인하면 된다.
-            // 하지만 난 여기서 시야각을 판별할 때 길이도 생각하기 위해서 길이를 각각 곱해주겠다
-            return dotResult >= threshold;
+            return dotResult >= threshold && distanceFromTarget <= distance;
         }
     }
 
