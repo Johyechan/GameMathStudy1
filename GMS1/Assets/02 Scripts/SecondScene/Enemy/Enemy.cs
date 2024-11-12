@@ -26,7 +26,7 @@ namespace SecondScene
 
         private void Update()
         {
-            if(_fov.CheckIsPlayerInFOV(_Degree))
+            if(_fov.CheckIsPlayerInFOV(_Distance, _Degree))
             {
                 Debug.Log("시야각 안에 들어옴");
             }
