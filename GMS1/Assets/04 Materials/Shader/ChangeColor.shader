@@ -48,7 +48,7 @@ Shader "Custom/ChangeColor"
                 fixed v = hsv.z; // Value (명도)
 
                 fixed c = v * s; // Chroma 계산(채도에 따른 색상 강도)  **색상의 강도는 색상의 밝기와 선명도**
-                fixed x = c * (1.0 - abs(fmod(h, 2.0) - 1.0)); // 색상에 따른 중간 값
+                fixed x = c * (1.0 - abs(fmod(h, 2.0) - 1.0)); // 색상에 따른 중간 값 색이 섞이는 정도
                 fixed m = v - c; // 최종 밝기 조정 값
 
                 // 색상 (Hue) 값에 따라 RGB를 계산
